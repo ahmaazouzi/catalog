@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		<h1>{{language.language}}</h1>
+    </br>
+    	<a href ='{{url_for('newWork', language_id=language.id)}}'><h3>Add New Work</h3></a>
+    </br>
+
+		{% for w in work %}
+			<h4>
+		Title :{{w.title}}
+	</br>
+		Author: {{w.author}}
+	</br>
+		Translator: {{w.translator}}
+	</br>
+		Translation Year: {{w.translation_year}}
+	</br>
+		Genre: {{w.genre}}
+	</br>
+		Amazon Link: {{w.amazon_link}}
+	</br>
+		Summary: {{w.summary}}
+	</br>
+		<a href ='{{url_for('editWork', language_id=language.id, work_id=w.id)}}'>Edit</a>
+	</br>
+		<a href ='{{url_for('deleteWork', language_id=language.id, work_id=w.id)}}'>Delete</a>
+	</br>
+</br>
+		</h4>{% endfor %}
+
+{% endblock content %}

@@ -1,0 +1,18 @@
+<!-- <html>
+	<body> -->	
+{% extends 'base.html' %}
+                    {% block left %}
+
+                    {% endblock left %}
+{% block content%}
+    <h2 class="text-muted">Languages <a href='{{url_for('newLanguage')}}' style='font-size:55px'> +</a></h2>
+    </br>
+		{% for l in language %}
+		<h2><a href ='{{url_for('workList', language_id = l.id)}}'>{{l.language}}</a></h2>
+		<a href ='{{url_for('deleteLanguage', language_id=l.id)}}'>Delete</a>
+</br>
+		{% endfor %}
+
+{% endblock content %}
+<!-- </body>
+</html> -->

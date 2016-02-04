@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:8000/login -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link href="./- My Webpage_files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./- My Webpage_files/bootstrap.css">
+    <link rel="stylesheet" href="./- My Webpage_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./- My Webpage_files/styles.css">
+    <title> - My Webpage</title>
+    
+  </head>
+<!-- ============================================================================================= -->
+  <body>
+        <div class="container">
+            <div class="row" style="background-color:#F9F9F9; font-family:HelveticaNeue-Light">
+                        <div class="col-md-5 text-left text-uppercase">
+                    <h1 class="title-super text-thin">World Literature</h1>
+                    <h4>A catalog of the world literary heritage</h4>
+                </div>
+                <div class="col-md-7 text-right"><h3>
+                	
+    					<a href="http://localhost:8000/login">Logout</a>
+					
+                </h3></div>
+            </div>
+
+<!-- ============================================================================================= -->
+
+		            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+
+
+<!-- ============================================================================================= -->
+            <div class="row text-left">
+                <div class="col-md-4">
+              
+                    
+                    
+
+                </div>
+
+                <div class="col-md-8">
+                           
+
+                    
+	<script src="./- My Webpage_files/cb=gapi.loaded_1" async=""></script><script src="./- My Webpage_files/cb=gapi.loaded_0" async=""></script><script src="./- My Webpage_files/jquery.min.js">
+	</script>
+	<script src="./- My Webpage_files/client-platform.js" async="" defer="" gapi_processed="true">
+	</script>
+
+
+
+	<div id="signinButton">
+		<div id="___signin_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 114px; height: 36px; position: relative; background: transparent;"><button style="opacity: 0; z-index: 10000; left: 0px; top: 0px; position: absolute; cursor: pointer; outline: 0px; width: 114px; height: 36px;">Sign in with Google</button><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 114px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 36px;" tabindex="0" vspace="0" width="100%" id="I0_1454326369174" name="I0_1454326369174" src="./- My Webpage_files/signin.html" data-gapiattached="true" title="Sign in with Google"></iframe></div>
+	</div>
+  <div id="result"></div>
+
+<script>
+function signInCallback(authResult) {
+  if (authResult['code']) {
+    // Hide the sign-in button now that the user is authorized
+    $('#signinButton').attr('style', 'display: none');
+    // Send the one-time-use code to the server, if the server responds, write a 'login successful' message to the web page and then redirect back to the main language page
+    $.ajax({
+      type: 'POST',
+      url: '/gconnect?state=JZVFJA30SA9WF8NPODWD0GH2NL396S7P',
+      processData: false,
+      data: authResult['code'],
+      contentType: 'application/octet-stream; charset=utf-8',
+      success: function(result) {
+        // Handle or verify the server response if necessary.
+        if (result) {
+          $('#result').html('Login Successful!</br>'+ result + '</br>Redirecting...')
+         setTimeout(function() {
+          window.location.href = "/language";
+         }, 4000);
+          
+      } else if (authResult['error']) {
+    console.log('There was an error: ' + authResult['error']);
+  } else {
+        $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+         }
+      }
+      
+  }); } }
+</script>
+
+                    	
+                                        	
+
+
+                </div>
+            
+
+        </div>
+
+
+
+
+
+</div><iframe name="oauth2relay708300887" id="oauth2relay708300887" src="./- My Webpage_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

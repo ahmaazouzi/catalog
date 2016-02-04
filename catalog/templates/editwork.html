@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h3>
+<form action= "{{url_for('editWork', language_id = language_id, work_id=w.id)}}" method = 'post'>
+
+<p>Title:</p>
+<input type = 'text' size='30' name = 'title' placeholder = '{{w.title}}'>
+
+<p>Author:</p>
+<input type = 'text' size='30' name = 'author' placeholder = '{{w.author}}'>
+
+<p>Translator:</p>
+<input type = 'text' size='30' name = 'translator' placeholder = '{{w.translator}}'>
+
+<p>Translation Year:</p>
+<input type = 'text' size='30' name = 'year' placeholder = '{{w.translation_year}}'>
+
+
+<p>Genre:
+<p>
+<input type="radio" name="genre" id="course1" value="Novel">Novel</br>
+<input type="radio" name="genre" id="course1" value="Short StorY Collection">Short StorY Collection</br>
+<input type="radio" name="genre" id="course1" value="Tales">Tales</br>
+<input type="radio" name="genre" id="course1" value="Poetry">Poetry</br>
+<input type="radio" name="genre" id="course1" value="Other">Other</br>
+
+<p>Amazon Link:</p>
+<input type = 'text' size='30' name = 'link' placeholder = '{{w.amazon_link}}'>
+
+<p>Summary:</p>
+<input type = 'text' size='30' name = 'summary' placeholder = '{{w.summary}}'>
+
+<p><input type='submit' value='Edit'>
+</br>
+</br>
+<a href= '{{url_for('workList', language_id= w.language_id)}}'>Cancel</a></p>
+</form>
+</h3>
+
+{% endblock content %}

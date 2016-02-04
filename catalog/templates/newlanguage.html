@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+                    
+
+<h1> New Language </h1>
+<form action="{{url_for('newLanguage')}}" method = 'POST'>
+<br>
+<p></p>
+
+<input type='text' size='30' name='name'>
+
+<input type='submit' value='Create'>
+
+</form>
+{% endblock content %}

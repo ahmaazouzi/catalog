@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> Do you wanna delete {{l.language}}? </h1>
+
+<form action="{{ url_for('deleteLanguage',language_id = l.id)}}" method = 'post'>
+
+<input type='submit', value = 'Delete'>
+
+
+</form>
+
+<a href = "{{ url_for('language')}}"> Cancel </a>
+{% endblock content %}

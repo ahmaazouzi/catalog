@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1> Do you wanna delete {{w.title}}? </h1>
+
+<form action="{{ url_for('deleteWork',language_id = w.language_id, work_id=w.id)}}" method = 'post'>
+
+<input type='submit', value = 'Delete'>
+
+
+
+
+</form>
+
+<a href = "{{ url_for('workList', work_id = w.id, language_id = w.language_id)}}"> Cancel </a>
+{% endblock content %}   

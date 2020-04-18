@@ -1,9 +1,9 @@
-#World Literature application Description
+# World Literature application Description
 This application is a catalogue for world literature works. The user can browse through different languages and see literary works and classics belonging written these languages. The user will also find information about the books, such as their titles, authors, translators, the years the works have been translated, an amazon link for each work and a short summary.
 Authorized users, who are logged in using their google plus credentials, can also add, delete and edit items in the application.
 
 
-#How to run the app
+# How to run the app
 Running the app requires Virtual box and vagrant virtual machine. To run the application:
 
 1.Using the terminal, change directory to catalog (**cd catalog**), then type **vagrant up** to launch the virtual machine.
